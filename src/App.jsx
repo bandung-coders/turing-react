@@ -1,16 +1,34 @@
-import React from "react";
-import {useState} from "react";
+import React, { useState } from "react";
+import Section from "./components/section";
 
 const FileUtama = () => {
-  let [tampil, setTampil] = useState(true);
-  let [apa, setApa] = useState(true);
+  const [tampil, setTampil] = useState(false);
+
+  const showHide = () => {
+    setTampil(!tampil);
+  }
 
   return (
-    <>
-      { tampil ? <h1>RESTU GANTENG</h1> : <h1>BABAW</h1> }
-    </>  
+    <div>
+
+      {
+        tampil &&
+        <div className="sidebar">
+          INI SIDEBAR
+        </div>
+      }
+
+      <button onClick={showHide} className="jarak"> KLIK </button>
+
+
+      <h1> WELCOME </h1>
+
+      <Section title="Nama Lengkap">
+        <input type="text" />
+      </Section>
+
+    </div>
   );
 };
-
 
 export default FileUtama;

@@ -1,0 +1,60 @@
+@keyframes slide {
+  0% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+
+.box {
+  background: #F00;
+  color: #FFF;
+  padding: 7px 15px;
+  border-radius: 5px;
+}
+
+.section {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.section .section-title {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #222;
+  line-height: 0.8rem;
+}
+
+.section .section-value {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #222;
+  line-height: 1.2rem;
+}
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  background: #F44;
+  color: #FFF;
+  height: 100%;
+  z-index: 100;
+  /* display: none; */
+}
+
+.jarak {
+  margin-left: 14rem;
+}
+
+.sidebar.active {
+  display: block;
+  animation-name: slide;
+  animation-duration: 0.3s;
+
+}
